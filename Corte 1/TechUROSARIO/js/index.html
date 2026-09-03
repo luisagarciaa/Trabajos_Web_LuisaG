@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas en html</title>
+</head>
+<body>
+    <h1> Holii Mundo TITULO </h1>
+    <h2>Subtitulo 1</h2>
+    <h3>subtitulo 2</h3>
+    <h4>subtitulo 3</h4>
+    <h5>subtitulo 4</h5>
+    <h6>subtitulo 5</h6>
+
+    <p>Este es un párrafo de ejemplo<BR> texto después del salto de línea</p>
+
+
+    <p>
+        <strong> strong <br></strong>
+        <em> em <br></em>
+        <u> u <br></u>
+        <sub> sub <br></sub>
+        <sup> sup <br></sup>
+    </p>
+
+    <p>Representemos los siguientes estilos en HTML</p>
+
+    <p>
+        La <em>fórmula</em> del <strong>agua</strong> es H<sub>2</sub>O<br>
+        Y un <u>número</u> elevado al <strong>cuadrado</strong> es X<sup>2</sup>
+    </p>
+    <p>
+        <strong> Una imagen de minions 736x736:
+        </p>
+
+    <img src="../imagenes/minion.jpg">
+
+    <p>
+        <strong> Ahora una imagen mas grande: 
+    
+    
+    </p>
+<img src="../imagenes/flapbag.jpg">
+
+<p>
+        <strong> Ahora vamos a reproducir la imagen muchas veces <BR>
+            sin necesidad de escribir el codigo muchas veces: 
+    
+</p>
+
+<div id="galeria"></div>
+<script>
+    const galeria = document.getElementById("galeria");
+
+    for (let i = 0; i < 5; i++) {
+        const imagen = document.createElement("img");
+
+        imagen.src = "../imagenes/minion.jpg";
+        imagen.width = 200;
+        imagen.height = 200;
+
+        galeria.appendChild(imagen);
+    }
+</script>
+
+<H1> Medidas de protección contra el
+coronavirus </H1>
+<OL TYPE="1">
+<Li>Usar guantes y tapabocas si vas a
+salir</LI>
+<LI>Lavado frecuente de manos</LI>
+<LI>Evitar contacto con objetos como
+puertas, barandas, etc,.</LI>
+</OL>
+
+<H1> Lista de artículos de
+protección</H1>
+<UL TYPE="circle">
+<Li>Tapabocas</LI>
+<LI>Jabón antibacterial</LI>
+<LI>Alcohol</LI>
+</UL>
+
+<A HREF=" https://www.youtube.com/ " target ="_blank">
+Ir a Youtube
+</A>
+<BR> 
+<BR>
+
+<caption> Listado de Personas </caption>
+<table border=1>
+<tr>
+<th> Nombre </th>
+<th> Apellido </th>
+<th> Edad </th>
+</tr>
+<tr>
+<td>Pepito</td>
+<td>Pérez</td>
+<td>Edad</td>
+</tr>
+<tr>
+<td>Lola</td>
+<td>Flórez</td>
+<td>30</td>
+</tr>
+</table>
+
+<BR>
+
+    <table border=1>
+<caption><strong>Agenda Semanal
+</strong></caption>
+<tr>
+<th> Hora </th>
+<th> Lunes </th>
+<th> Martes </th>
+</tr>
+<tr>
+<th>7:00 am</th>
+<td colspan="2">Desayuno </td>
+</tr>
+<tr>
+<th>8:00 am</th>
+<td>Reunión</td>
+<td>Clase</td>
+</tr>
+</table>
+
+<BR>
+
+<table border=1>
+<caption><strong>Agenda
+Semanal</strong></caption>
+<tr>
+<th> Hora </th>
+<th> Lunes </th>
+<th> Martes </th>
+</tr>
+<tr>
+<th>7:00 am</th>
+<td rowspan="2">Reunión Jefe </td>
+<td style="background-color: yellow;">Desayuno</td>
+</tr>
+<tr>
+<th>8:00 am</th>
+<td style="background-color: rgb(246, 155, 155);">Informe</td>
+</tr>
+</table>
+
+</body>
+</html>
