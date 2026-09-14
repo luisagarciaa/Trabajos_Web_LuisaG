@@ -1,0 +1,33 @@
+</-- Reto #1 Formularios --/>
+
+<form name="Formulario" action="" method="" target="_blank">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>body { background-image: url('imagenes/minion.jpg');}</style>
+<label for="control">Contact Form</label> 
+<BR>
+<label for="control">Please fill in your information and we'll be sending your order in no time</label>
+<BR>
+<label for="formulario">Your Name</label>
+<input type="text" name="nombre" placeholder="First Name"> <input type="text" name="nombre" placeholder="Last Name">
+<BR>
+<label for="formulario">Your Email</label>
+<input type="email" name="email" placeholder="e.g. hello@contact.net">
+<BR>
+<label for="formulario">Phone*</label>
+<input type="text" name="telefono" placeholder="###"> <input type="text" name="telefono" placeholder="###"> <input type="text" name="telefono" placeholder="###">
+<BR>
+<label for="mensaje">Message Subject*</label>
+<select name="mensaje">
+<option selected value="0"> Other </option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<BR>
+<label for="mensaje">Message*</label>
+<textarea rows="3" cols="20" name="mensaje"> </textarea>
+<BR>
+<label for="mensaje">Verification*</label> <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+<BR>
+<input type="submit" value="SUBMIT FORM">
+</form>
