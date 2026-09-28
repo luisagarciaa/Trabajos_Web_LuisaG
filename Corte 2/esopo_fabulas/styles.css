@@ -1,0 +1,54 @@
+/* Estilos generales */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #0ab67c;
+  color: #fefefe;
+  min-height: 100vh;
+  padding: 20px;
+}
+/* margen */
+.biografia {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  border: 8px dashed #ffff04;
+}
+
+/* Imagen */
+.foto {
+  width: 250px;
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Título y descripción  */
+.info { flex: 1; }
+.info h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.info p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+/* Frase Homero */
+.destacado {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  text-decoration: underline;
+  color: #ffff04;
+}
+
+.foto img{
+	width: 150px;
+	border: 5px solid #FFFFFF;
+	border-radius: 50%;
+}
