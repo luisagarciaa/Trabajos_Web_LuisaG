@@ -1,0 +1,106 @@
+/*
+  Paleta:
+  Azul principal (#1f4e79): color principal para títulos.
+  Dorado acento (#d99b2b): color de acento para destacar elementos.
+  Fondo claro (#f4f7fb): color de fondo de la página.
+  Texto principal (#1f2933): texto general y títulos.
+  Texto secundario (#52606d): textos secundarios.
+*/
+:root {
+    --color-principal: #1f4e79;
+    --color-acento: #d99b2b;
+    --color-fondo: #f4f7fb;
+    --texto-principal: #1f2933;
+    --texto-secundario: #52606d;
+    --radio-base: 0.5rem;
+    --tamano-cuerpo: 1rem;
+    --tamano-h1: 2.5rem;
+    --tamano-h2: 1.75rem;
+    --tamano-h3: 1.25rem;
+}
+
+/* border-box mantiene el ancho declarado aunque se agreguen bordes o relleno. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: var(--tamano-cuerpo);
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+    font-size: var(--tamano-h1);
+}
+
+h2 {
+    font-size: var(--tamano-h2);
+}
+
+h3 {
+    font-size: var(--tamano-h3);
+}
+
+header {
+    border: 0.125rem solid var(--color-principal);
+    border-radius: var(--radio-base);
+    padding: var(--radio-base);
+}
+
+header .letra-sorteada {
+    color: var(--color-acento);
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+header h2 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: var(--tamano-cuerpo);
+    text-align: left;
+    width: 100%;
+}
+
+th,
+td {
+    border: 0.125rem solid var(--color-principal);
+    padding: var(--radio-base);
+}
+
+thead th {
+    background: var(--color-principal);
+    color: var(--color-fondo);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--color-fondo);
+}
+
+.hoja-respuestas {
+    display: grid;
+    gap: var(--radio-base);
+}
+
+.hoja-respuestas input,
+.hoja-respuestas select {
+    border: 0.125rem solid var(--color-principal);
+    border-radius: var(--radio-base);
+    padding: var(--radio-base);
+    width: 100%;
+}
+
+input[type="number"] {
+    max-width: 8rem;
+}

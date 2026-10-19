@@ -1,0 +1,4 @@
+Letras habilitadas para el sorteo del torneo
+(se excluyen las que dejan categorías imposibles: K, Q, W, X, Y, Z, Ñ)
+
+A B C D E F G H I J L M N O P R S T U V

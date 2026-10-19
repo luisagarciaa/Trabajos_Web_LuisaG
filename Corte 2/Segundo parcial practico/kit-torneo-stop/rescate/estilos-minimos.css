@@ -1,0 +1,6 @@
+:root { --principal: #333; --fondo: #fff; --linea: #ccc; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: var(--fondo); color: var(--principal); margin: 0; padding: 16px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid var(--linea); padding: 6px; text-align: left; }
+button { padding: 8px 16px; cursor: pointer; }

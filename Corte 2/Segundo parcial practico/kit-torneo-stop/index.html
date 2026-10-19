@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Filo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h2>Letra sorteada: <span class="letra-sorteada">F</span></h2>
+        <h1>Festival Filo</h1>
+        <a href="#reglas-torneo">Ir a las reglas del torneo</a>
+        <a href="#hoja-respuestas">Ir a la hoja de respuestas</a>
+    </header>
+    <main>
+        <table>
+            <caption>Respuestas de la ronda 1</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Lugar</th>
+                    <th scope="col">Animal</th>
+                    <th scope="col">Objeto</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Comida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Federica</td>
+                    <td>Francia</td>
+                    <td>Foca</td>
+                    <td>Flauta</td>
+                    <td>Ferrari</td>
+                    <td>Frambuesas</td>
+                </tr>
+                <tr>
+                    <td>Fernanda</td>
+                    <td>Filipinas</td>
+                    <td>Faisán</td>
+                    <td>Flauta</td>
+                    <td>Fanta</td>
+                    <td>Fideos</td>
+                </tr>
+                <tr>
+                    <td>Fabiola</td>
+                    <td>Finlandia</td>
+                    <td>Foca</td>
+                    <td>Flauta</td>
+                    <td>Fila</td>
+                    <td>Frijoles</td>
+                </tr>
+            </tbody>
+        </table>
+        <form id="hoja-respuestas" class="hoja-respuestas" action="#" method="get">
+            <fieldset>
+                <legend>Tu hoja de respuestas</legend>
+                <div>
+                    <label for="letra-activa">Letra de la ronda:</label>
+                    <select id="letra-activa" name="letra_activa">
+                        <option value="F" selected>F</option>
+                    </select>
+                    <label for="numero-ronda">Número de ronda:</label>
+                    <input type="number" id="numero-ronda" name="numero_ronda" min="1" max="13" value="2" required>
+                </div>
+                <br>
+                <div>
+                    <label for="resp-nombre">Nombre:</label>
+                    <input type="text" id="resp-nombre" name="resp_nombre" placeholder="Ej: Fabián" required pattern="[Ff][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="La palabra debe iniciar con F y tener mínimo 3 letras.">
+                </div>
+                <br>
+
+                <div>
+                    <label for="resp-lugar">Lugar:</label>
+                    <input type="text" id="resp-lugar" name="resp_lugar" placeholder="Ej: Francia" required pattern="[Ff][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="La palabra debe iniciar con F y tener mínimo 3 letras.">
+                </div>
+                <br>
+
+                <div>
+                    <label for="resp-animal">Animal:</label>
+                    <input type="text" id="resp-animal" name="resp_animal" placeholder="Ej: Foca" required pattern="[Ff][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="La palabra debe iniciar con F y tener mínimo 3 letras.">
+                </div>
+                <br>
+
+                <div>
+                    <label for="resp-objeto">Objeto:</label>
+                    <input type="text" id="resp-objeto" name="resp_objeto" placeholder="Ej: Flauta" required pattern="[Ff][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="La palabra debe iniciar con F y tener mínimo 3 letras.">
+                </div>
+                <br>
+
+                <div>
+                    <label for="resp-marca">Marca:</label>
+                    <input type="text" id="resp-marca" name="resp_marca" placeholder="Ej: Fanta" required pattern="[Ff][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="La palabra debe iniciar con F y tener mínimo 3 letras.">
+                </div>
+                <br>
+
+                <div>
+                    <label for="resp-comida">Comida:</label>
+                    <input type="text" id="resp-comida" name="resp_comida" placeholder="Ej: Fresas" required pattern="[Ff][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="La palabra debe iniciar con F y tener mínimo 3 letras.">
+                </div>
+                <br>
+                <div>
+                    <p>Escudo del torneo:</p>
+                    <img src="recursos/escudo-festival.webp" alt="Escudo Festival Filo">
+                    
+                    <p>Sonido del timbre:</p>
+                    <audio controls src="recursos/timbre.mp3"></audio>
+                </div>
+                <br>
+                <div>
+                    <button type="submit">¡STOP!</button>
+                    <button type="reset">Borrar todo</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </main>
+    <script>
+        const respuestas = document.querySelectorAll('input[id^="resp-"]');
+
+        respuestas.forEach((respuesta) => {
+            respuesta.addEventListener("input", () => {
+                const valor = respuesta.value.trim();
+                const esValida = valor === "" || valor.toLocaleUpperCase().startsWith("F");
+
+                if (esValida) {
+                    respuesta.setCustomValidity("");
+                } else {
+                    respuesta.setCustomValidity(
+                        "La palabra que ingreses debe iniciar con la letra F"
+                    );
+                    respuesta.reportValidity();
+                }
+            });
+
+            respuesta.addEventListener("invalid", () => {
+                if (respuesta.validity.valueMissing) {
+                    respuesta.setCustomValidity(
+                        "Debes rellenar este campo con una palabra que empiece por la letra F y tenga al menos 3 letras."
+                    );
+                }
+            });
+        });
+    </script>
+    <aside id="reglas-torneo">
+        <h3>Reglas del Torneo</h3>
+        <ol>
+            <li>La letra del torneo se sortea al minuto cero y es la misma para todo el grupo. Todo el contenido que usted invente —nombres, respuestas, nombre del torneo— debe empezar por esa letra</li>
+            <li>Las rondas son secuenciales: lo que construye en una es el insumo de la siguiente.</li>
+            <li>Al final de cada ronda el profesor anuncia ¡STOP!: todos hacen commit con el formato ronda-NN: descripción. El historial de git es parte de la evaluación.</li>
+            <li>Se permite consultar documentación oficial: MDN, react.dev, getbootstrap.com y la documentación de TypeScript.</li>
+            <li>No se permiten asistentes de inteligencia artificial, código propio de proyectos anteriores ni plantillas descargadas.</li>
+            <li>Todo se escribe durante el parcial, desde una carpeta vacía. Lo único que recibe es el kit del torneo.</li>
+            <li>No se evalúa backend, bases de datos ni estado en React: este parcial cubre HTML, CSS, JavaScript y componentes con props.</li>
+            <li>Cada estudiante tiene dos comodines PISTA (el profesor responde una duda puntual; cuesta el 10 % de esa ronda) y un comodín SALTO (usa el archivo de rescate del kit para continuar; esa ronda vale 0 pero la cadena no se rompe).</li>
+            <li>Si una ronda no le funciona, documente en BITACORA.md qué intentó y qué error obtuvo: eso otorga puntaje parcial.</li>
+            <li>La entrega se hace dentro del tiempo. Lo que llegue después no se evalúa.</li>
+        </ol>
+        <h3>Categorías</h3>
+        <ul>
+            <li>Nombre</li>
+            <li>Lugar</li>
+            <li>Animal</li>
+            <li>Objeto</li>
+            <li>Marca</li>
+            <li>Comida</li>
+        </ul>
+    </aside>
+    <footer>
+        <p>Luisa Maria Garcia Ramirez</p>
+        <p>Grupo 4</p>
+    </footer>
+</body>
+</html>

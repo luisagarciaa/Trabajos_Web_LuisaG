@@ -1,0 +1,17 @@
+{
+  "comentario": "Ronda de ejemplo con la letra M. Úsela para probar sus funciones de los retos 8 y 9. El día del parcial reemplace estos datos por los suyos con la letra sorteada.",
+  "numero": 1,
+  "letra": "M",
+  "categorias": ["Nombre", "Lugar", "Animal", "Objeto", "Marca", "Comida"],
+  "jugadores": [
+    { "nombre": "Mariana", "respuestas": { "Nombre": "Manuel", "Lugar": "Medellín", "Animal": "Mono", "Objeto": "Martillo", "Marca": "Mazda", "Comida": "Mango" } },
+    { "nombre": "Mateo", "respuestas": { "Nombre": "Mónica", "Lugar": "Manizales", "Animal": "Mono", "Objeto": "Maleta", "Marca": "Motorola", "Comida": "Mazamorra" } },
+    { "nombre": "Miguel", "respuestas": { "Nombre": "Mariana", "Lugar": "Moscú", "Animal": "Murciélago", "Objeto": "Martillo", "Marca": "Mazda", "Comida": "Maíz" } }
+  ],
+  "marcadorEsperado": [
+    { "jugador": "Mateo", "puntaje": 550 },
+    { "jugador": "Miguel", "puntaje": 500 },
+    { "jugador": "Mariana", "puntaje": 450 }
+  ],
+  "nota": "El marcador esperado usa la regla de 100 / 50 / 0. Si ya aplicó el cambio de reglamento del Reto 10 (25 puntos cuando se repite tres o más veces), con estos datos el resultado no cambia: ninguna respuesta se repite tres veces."
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablero mínimo de STOP</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+  <h1>Torneo de STOP</h1>
+  <p>Letra: <strong id="letra-ronda">?</strong> · Segundos: <strong id="cronometro">60</strong></p>
+</header>
+
+<main id="tablero">
+  <table id="tabla-ronda">
+    <caption>Ronda en juego</caption>
+    <thead>
+      <tr><th scope="col">Jugador</th><th scope="col">Nombre</th><th scope="col">Lugar</th>
+          <th scope="col">Animal</th><th scope="col">Objeto</th><th scope="col">Marca</th><th scope="col">Comida</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Jugador 1</th><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <form id="hoja-respuestas">
+    <fieldset>
+      <legend>Respuestas</legend>
+      <p><label for="Nombre">Nombre</label> <input id="Nombre" name="Nombre" required placeholder="..."></p>
+      <p><label for="Lugar">Lugar</label> <input id="Lugar" name="Lugar" required placeholder="..."></p>
+      <p><label for="Animal">Animal</label> <input id="Animal" name="Animal" required placeholder="..."></p>
+      <p><label for="Objeto">Objeto</label> <input id="Objeto" name="Objeto" required placeholder="..."></p>
+      <p><label for="Marca">Marca</label> <input id="Marca" name="Marca" required placeholder="..."></p>
+      <p><label for="Comida">Comida</label> <input id="Comida" name="Comida" required placeholder="..."></p>
+    </fieldset>
+    <button type="submit">¡STOP!</button>
+  </form>
+
+  <ol id="marcador"></ol>
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
